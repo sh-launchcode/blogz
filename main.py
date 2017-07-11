@@ -142,7 +142,7 @@ def login():
         else:
             return render_template('login.html')
 
-@app.route('/blog', methods=['POST', 'GET'])
+@app.route('/blog', methods=['GET'])
 def blog():
     if 'name' in session:
         flash("Currently logged in as " + session['name'])
